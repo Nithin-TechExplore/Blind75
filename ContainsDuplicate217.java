@@ -1,11 +1,12 @@
 import java.util.*;
 
-public class 217_ContainsDuplicate
+public class ContainsDuplicate217
 {
     public static void main(String[] args)
     {
         List<Integer> li=Arrays.asList(1,2,3,4,3,5,6);
         boolean ans=solve(li);
+        System.out.println(ans);
 
 
     }
