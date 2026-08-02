@@ -11,16 +11,30 @@ public class SetMatrixZeros73
     public static void solve(int[][] arr)
     {
         boolean firstRow=false,firstColumn=false;
+        for(int i=0;i<arr[0].length;i++)
+        {
+            if(arr[0][i]==0)
+                {
+                   firstRow=true;
+                }
+        }
 
         for(int i=0;i<arr.length;i++)
         {
-            for(int j=0;j<arr[0].length;j++)
+            if(arr[i][0]==0)
+                {
+                   firstColumn=true;
+                }
+        }
+        
+        
+
+        for(int i=1;i<arr.length;i++)
+        {
+            for(int j=1;j<arr[0].length;j++)
             {
                 if(arr[i][j]==0)
                 {
-                    if(arr[0][j]==0) firstRow=true;
-                    if(arr[i][0]==0) firstColumn=true;
-
                     arr[0][j]=0;
                     arr[i][0]=0;
                 }
