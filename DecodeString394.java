@@ -3,7 +3,9 @@ public class DecodeString394
 {
     public static void main(String[] args)
     {
-        String input="3[a]2[bc]";
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the String which you want to take as input");
+        String input=sc.next();
         String ans=solve(input);
         System.out.println(ans);
     }
@@ -11,6 +13,8 @@ public class DecodeString394
     public static String solve(String input)
     {
         Stack<Character> stack=new Stack<>();
+
+
         for(char c:input.toCharArray())
         {
             if(c!=']')
@@ -23,33 +27,36 @@ public class DecodeString394
                 {
                     sb.insert(0, stack.pop());
                 }
-                String tempString=sb.toString();
+                String tempSb=sb.toString();
                 stack.pop();
 
                 StringBuilder digit=new StringBuilder();
-                while (!stack.isEmpty() && Character.isDigit(stack.peek())) 
+                while(!stack.isEmpty() && Character.isDigit(stack.peek()))
                 {
                     digit.insert(0, stack.pop());
-                    
                 }
-                int count=Integer.valueOf(String.valueOf(digit.toString()));
+
+                int count=Integer.valueOf(digit.toString());
 
                 while(count>0)
                 {
-                    for(char cm:tempString.toCharArray())
+                    for(char i:tempSb.toCharArray())
                     {
-                        stack.push(cm);
+                        stack.push(i);
                     }
                     count--;
                 }
             }
         }
-        
-        StringBuilder sm=new StringBuilder();
-        while (!stack.isEmpty()) {
-            sm.insert(0,stack.pop());
+
+
+        StringBuilder output=new StringBuilder();
+        while(!stack.isEmpty())
+        {
+            output.insert(0, stack.pop());
         }
-        return sm.toString();
+
+        return output.toString();
 
     }
 }
