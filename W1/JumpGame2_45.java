@@ -1,3 +1,4 @@
+package W1;
 public class JumpGame2_45
 {
     public static void main(String[] args)
