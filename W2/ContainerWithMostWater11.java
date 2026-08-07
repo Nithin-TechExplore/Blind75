@@ -1,4 +1,3 @@
-package W2;
 public class ContainerWithMostWater11 {
 
     public static void main(String[] args)
