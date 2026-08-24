@@ -1,4 +1,3 @@
-package W3;
 
 public class ValidAnagram242 {
 

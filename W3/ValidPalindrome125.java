@@ -7,7 +7,7 @@ class Solution {
         boolean myAns=isPalindrome(s);
         System.out.println(myAns);
     }
-    public boolean isPalindrome(String s) {
+    public static boolean isPalindrome(String s) {
 
         Pattern pattern=Pattern.compile("[a-zA-Z0-9]+");
         Matcher matcher=pattern.matcher(s);

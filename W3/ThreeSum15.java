@@ -1,4 +1,3 @@
-package W3;
 import java.util.*;
 class ThreeSum15 {
 
