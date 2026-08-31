@@ -1,5 +1,7 @@
 package W1;
 import java.util.*;
+// Input: s = "3[a]2[bc]"
+// Output: "aaabcbc"
 public class DecodeString394
 {
     public static void main(String[] args)
